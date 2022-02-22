@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Arbeitszeitenrechner.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class InfosPage : ContentPage
     {
-        public AboutPage()
+        public InfosPage()
         {
             InitializeComponent();
         }
