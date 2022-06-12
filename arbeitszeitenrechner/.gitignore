@@ -8,6 +8,10 @@
 .buildlog/
 .history
 .svn/
+<<<<<<< Updated upstream
+=======
+migrate_working_dir/
+>>>>>>> Stashed changes
 
 # IntelliJ related
 *.iml

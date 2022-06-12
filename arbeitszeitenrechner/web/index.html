@@ -31,6 +31,7 @@
 
   <title>arbeitszeitenrechner</title>
   <link rel="manifest" href="manifest.json">
+<<<<<<< Updated upstream
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -99,6 +100,30 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+=======
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      });
+    });
+>>>>>>> Stashed changes
   </script>
 </body>
 </html>
