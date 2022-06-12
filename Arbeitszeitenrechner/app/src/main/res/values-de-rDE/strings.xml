@@ -3,4 +3,5 @@
     <string name="app_name">Arbeitszeitenrechner</string>
     <string name="in_out">Eingabe Ausgabe Überstunden</string>
     <string name="title_Settings">Einstellungen</string>
+    <string name="title_Settings_Starttime">Startzeit</string>
 </resources>

@@ -1,4 +1,4 @@
-package de.littledragon.arbeitszeitenrechner.ui.home
+package de.littledragon.arbeitszeitenrechner.ui.timer
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import de.littledragon.arbeitszeitenrechner.databinding.FragmentTimerBinding
 
-class HomeFragment : Fragment() {
+class TimerFragment : Fragment() {
 
     private var _binding: FragmentTimerBinding? = null
 
@@ -22,14 +22,14 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+        val timerViewModel =
+                ViewModelProvider(this).get(TimerViewModel::class.java)
 
         _binding = FragmentTimerBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        timerViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

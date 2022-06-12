@@ -1,15 +1,14 @@
-package de.littledragon.arbeitszeitenrechner.ui.notifications
+package de.littledragon.arbeitszeitenrechner.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import de.littledragon.arbeitszeitenrechner.databinding.FragmentSettingsBinding
 
-class NotificationsFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
 
@@ -23,15 +22,10 @@ class NotificationsFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-                ViewModelProvider(this).get(NotificationsViewModel::class.java)
+                ViewModelProvider(this).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

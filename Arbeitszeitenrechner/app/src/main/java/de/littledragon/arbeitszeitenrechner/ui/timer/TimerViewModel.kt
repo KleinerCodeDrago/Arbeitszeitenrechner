@@ -1,10 +1,10 @@
-package de.littledragon.arbeitszeitenrechner.ui.home
+package de.littledragon.arbeitszeitenrechner.ui.timer
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class TimerViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"
